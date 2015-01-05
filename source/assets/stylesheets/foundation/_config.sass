@@ -21,15 +21,15 @@
 
 // ----- Palette ----- //
 
-$plum: #4e4e5b
+$accent: #2e89d4
 
 // ----- Base ----- //
 
-$c-background-invert: #fff
-$c-background: #ecf0f1
-$c-border: lighten($plum, 30%)
-$c-highlight: $plum
-$c-subdue: lighten($plum, 40%)
+$c-background-invert: #444
+$c-background: #fff
+$c-border: $accent
+$c-highlight: $accent
+$c-subdue: lighten($accent, 25%)
 $c-text-invert: #fff
 $c-text: #444
 
@@ -39,16 +39,16 @@ $c-text: #444
 
 // ----- Borders & Box Shadow ----- //
 
-$b-borderRadius: 3px
+$b-borderRadius: 4px
 $b-borderStyle: solid
-$b-borderWidth: 2px
+$b-borderWidth: 1px
 $b-border: $b-borderWidth $b-borderStyle $c-border
-$b-boxShadow: 0 2px 0 rgba($c-text, 0.25)
+$b-boxShadow: 0 1px 4px rgba($c-text, 0.25)
 
 // ----- Typography ----- //
 
-$b-fontFamily-heading: sans-serif
-$b-fontFamily: sans-serif
+$b-fontFamily-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$b-fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif
 $b-fontSize: 16px
 $b-fontSize-xs: 60%
 $b-fontSize-s: 75%
