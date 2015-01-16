@@ -1,27 +1,60 @@
-activate :automatic_image_sizes
-activate :directory_indexes
+# --------------------------------------
+#   Config
+# --------------------------------------
+
+# ----- Middleman ----- #
+
 activate :livereload
 
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade = false
-end
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-ignore 'assets/javascripts/vendor/*'
+# ----- Assets ----- #
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 
-# Build-specific configuration
+# ----- Images ----- #
+
+activate :automatic_image_sizes
+
+# --------------------------------------
+#   Content
+# --------------------------------------
+
+# ----- Blog ----- #
+
+# activate :blog do |blog|
+#   blog.layout = "layout_article"
+#   blog.permalink = "{title}"
+#   blog.prefix = "blog"
+#   blog.sources = "articles/{title}.html"
+# end
+
+# ----- Directories for assets (needs to be activated after blog) ----- #
+
+activate :directory_indexes
+
+# --------------------------------------
+#   Production
+# --------------------------------------
+
+# ----- Prefixing ----- #
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.cascade = false
+end
+
+# ----- Helpers ----- #
+
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
+
+# ----- Build ----- #
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
