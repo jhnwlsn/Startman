@@ -45,18 +45,11 @@ activate :autoprefixer do |config|
   config.cascade = false
 end
 
-# ----- Helpers ----- #
-
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
 # ----- Build ----- #
 
 configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :relative_assets
+  activate :gzip
 end
